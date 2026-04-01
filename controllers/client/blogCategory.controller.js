@@ -1,6 +1,6 @@
 const { tree } = require("../../helpers/createTree");
 const getSubCategory = require("../../helpers/getSubCategory");
-const BlogCategory = require("../../models/BlogCategory.model");
+const BlogCategory = require("../../models/blogCategory.model");
 const Blog = require("../../models/blog.model");
 const mongoose = require("mongoose");
 module.exports.getListCategory = async (req,res) => {
