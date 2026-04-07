@@ -10,9 +10,9 @@ module.exports = (app) => {
     const api = "/api/v1";
     app.use(api+"/products",productRoutes);
     app.use(api+"/product-category",productCategoryRoutes);
-    app.use(api+"/users",authMiddleware.auth,userRoutes);
+    app.use(api+"/users",userRoutes);
     app.use(api+"/cart",cartRoutes);
-    app.use(api+"/orders",orderRoutes);
+    app.use(api+"/orders",authMiddleware.auth,orderRoutes);
     app.use(api+"/blogs",blogRoutes);
     app.use(api+"/blog-category",blogCategoryRoutes);
 }
