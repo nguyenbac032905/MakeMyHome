@@ -6,7 +6,7 @@ module.exports.getListProduct = async (req,res) => {
     const find = {deleted: false,status:"active"};
     //pagination
     const objectPagi = {
-        limit: 2,
+        limit: 10,
         currentPage: 1
     };
     const countProduct = await Product.countDocuments({deleted: false, status: "active"});
