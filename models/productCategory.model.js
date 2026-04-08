@@ -9,6 +9,7 @@ const productCategorySchema = new mongoose.Schema({
         ref: "ProductCategory",
         default: null
     },
+    thumbnail: String,
     description: String,
     status: String,
     position: Number,
