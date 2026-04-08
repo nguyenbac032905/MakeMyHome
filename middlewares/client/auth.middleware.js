@@ -9,7 +9,8 @@ module.exports.auth = async (req,res,next) => {
             });
         }
         const tokenUser = authHeader.split(" ")[1];
-        const user = await User.findOne({tokenUser: tokenUser,deleted: false, status: "active"}).select("-password");
+        console.log(tokenUser)
+        const user = await User.findOne({tokenUser: tokenUser,deleted: false}).select("-password");
         if(!user){
             res.status(401).json({
                 message: "User không tồn tại"
